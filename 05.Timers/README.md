@@ -6,6 +6,8 @@
 
 Ver capítulo 21 del User Manual
 
+> Para ver la configuracion con la librería lpc17xx_timer.h, ingresar a [este link](TMR_LIB.md)
+
 ## Características
 
 La LPC1769 tiene 4 bloques de timers de 32 bits. Los cuatro timer/counters son identicos (a excepción de la dirección base del perisférico).
@@ -188,7 +190,10 @@ $$
 La máxima resolución que puede lograrse es de $10[ns]$ cuando se utiliza una frecuencia de $100[MHz]$ y $PR=0$.
 
 ## Ejemplos de código
-Revisar el directorio `src`.
+Revisar el directorio [examples](./examples/).
 
+
+
+### Ejemplo 1 (configuración básica)
 En el ejemplo planteado, se genera una señal cuadrada de frecuencia variable utilizando el timer 0 en modo match. La frecuencia se actualiza a través de una interrupción externa en EINT0. 
 Luego, Se utiliza el timer 1 en modo captura para calcular el periodo de la señal generada (para probarlo será necesario conectar el pin 1.28 (MAT0.0) con el pin 1.18 (CAP1.0)).
