@@ -1,3 +1,6 @@
 .vscode/
 build/
 so
+lpc17xx_libcfg.h
+makefile
+EWARM/
